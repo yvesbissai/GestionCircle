@@ -1,0 +1,3 @@
+GestionCircle.Modele.Spectateur
+GestionCircle.Modele.Dresseur
+GestionCircle.Modele.Signe

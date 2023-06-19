@@ -2,15 +2,15 @@ using GestionCircle.Interface;
 
 namespace GestionCircle.Modele;
 
-public class Accrobatie : ITour
+public class Accrobatie : Tour
 {
     public string Nom{get; set; }
     public Accrobatie(string nom)
     {
         Nom = nom;
     }
-    public void Tourner(string? name)
+    public override void Tourner(string name)
     {
-        Console.WriteLine($"{Nom} de {name}");
+        Console.WriteLine($"Accrobatie : {Nom} du singe de {name}");
     }
 }

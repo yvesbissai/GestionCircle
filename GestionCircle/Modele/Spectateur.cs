@@ -4,19 +4,22 @@ namespace GestionCircle.Modele;
 
 public class Spectateur : ISpectateur
 {
-    public string NameSpectateur { get; set; }
+    public string? NameSpectateur { get; set; }
 
-    public Spectateur(string name)
+    public Spectateur()
     {
-        NameSpectateur = name;
+        
     }
+
+    public string NameSpetateur { get; set; }
+
     public void Applaudir()
     {
-        Console.WriteLine($"{NameSpectateur} applaudit ");
+        Console.WriteLine($"le spectateur {NameSpectateur} applaudit pendant le tour d'accrobatie");
     }
 
     public void Siffler()
     {
-        Console.WriteLine($"{NameSpectateur} siffle");
+        Console.WriteLine($"le spectateur {NameSpectateur} siffle pendant le tour de musique");
     }
 }

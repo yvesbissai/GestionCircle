@@ -2,5 +2,6 @@ namespace GestionCircle.Interface;
 
 public interface IDresseur
 {
-    public void DemandeAuSigneFaireTour();
+    public string NameDresseur { get; set; }
+    public void DemandeAuSigneFaireTour(int i,string name);
 }

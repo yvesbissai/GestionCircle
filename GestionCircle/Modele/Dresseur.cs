@@ -4,17 +4,18 @@ namespace GestionCircle.Modele;
 
 public class Dresseur : IDresseur
 {
-    public string NameDresseur { get; set; }
-    public IAnimal Singe { get; set; }
+    
+    public IAnimal? Singe { get; set; }
 
-    public Dresseur(IAnimal singe, string name)
+    public Dresseur(IAnimal singe)
     {
         Singe = singe;
-        NameDresseur = name;
     }
-    
-    public void DemandeAuSigneFaireTour()
+
+    public string NameDresseur { get; set; }
+
+    public void DemandeAuSigneFaireTour(int i,string name)
     {
-        Singe.FaireUnTour();
+        Singe?.FaireUnTour(i,this.NameDresseur);
     }
 }

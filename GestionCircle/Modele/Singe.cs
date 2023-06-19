@@ -6,25 +6,17 @@ public class Singe : IAnimal
 {
     public string? NameSinge { get; set; }
 
-    public Singe(string? name)
-    {
-        NameSinge = name;
-    }
-    public IList<ITour> Tours { get; set; }
+    public IList<Tour> Tours { get; set; }
+    
 
-    public Singe(IList<ITour> tours, ITour tour1, ITour tour2)
+    public Singe(IList<Tour> tours)
     {
         Tours = tours;
-        Tours.Add(tour1);
-        Tours.Add(tour2);
-
     }
+    
 
-    public void FaireUnTour()
+    public void FaireUnTour(int i,string name)
     {
-        var rand = new Random();
-        var index = rand.Next(2);
-        Tours[index].Tourner(NameSinge);
-
+        Tours[i].Tourner(name);
     }
 }
